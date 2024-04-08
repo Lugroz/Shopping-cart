@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/application.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center my-4">My Shopping Cart</h1>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-responsive">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price per Unit($)</th>
+                    <th scope="col">Subtotal($)</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="cart-items">
+                <tr>
+                    <td class="name">Salmon</td>
+                    <td class="quantity"><input type="number" min="0" value="1"></td>
+                    <td class="price">$20</td>
+                    <td class="subtotal">$20</td>
+                    <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                </tr>
+                <tr>
+                    <td class="name">Pork</td>
+                    <td class="quantity"><input type="number" min="0" value="1"></td>
+                    <td class="price">$10</td>
+                    <td class="subtotal">$10</td>
+                    <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                </tr>
+                <tr>
+                    <td class="name">Chicken</td>
+                    <td class="quantity"><input type="number" min="0" value="1"></td>
+                    <td class="price">$16</td>
+                    <td class="subtotal">$16</td>
+                    <td><button class="btn btn-light btn-sm remove">Remove</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <form class="col" id="addItemForm">
+            <input class="mx-1 item" type="text" placeholder="Item">
+            <input class="mx-1 quantity" type="number" min="0" placeholder="Quantity">
+            <input class="mx-1 price" type="number" min="0" step="0.01" placeholder="Price">
+            <button class="btn btn-success btn-sm mb-1 add">Add</button>
+        </form>
+    </div>
+    <div class="row pt-2">
+        <div class="col-9">
+            <h2>Total Price:</h2>
+        </div>
+        <div class="col-3">
+            <h2 id="totalCart">$46</h2>
+        </div>
+    </div>
+</div>
+</body>
+</html>
